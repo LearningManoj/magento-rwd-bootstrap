@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <!-- Remove RWD CSS -->
+            <action method="removeItem"><type>skin_css</type><url>css/styles.css</url></action>
+            <action method="removeItem"><type>skin_css</type><url>css/styles-ie8.css</url></action>
+            <action method="removeItem"><type>skin_css</type><url>css/madisonisland.css</url></action>
+            <action method="removeItem"><type>skin_css</type><url>css/madisonisland-ie8.css</url></action>
+            <action method="removeItem"><type>link_rel</type><name>//fonts.googleapis.com/css?family=Raleway:300,400,500,700,600</name></action>
+            
+            <!-- Remove RWD JS -->
+            <action method="removeItem"><type>skin_js</type><name>js/lib/jquery.cycle2.min.js</name></action>
+            <action method="removeItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name></action>
+            <action method="removeItem"><type>skin_js</type><name>js/slideshow.js</name></action>
+
+            <!-- Remove Magento default assets -->
+            <action method="removeItem"><type>js</type><name>scriptaculous/builder.js</name></action>
+            <!-- Removing effects.js crashes validation <action method="removeItem"><type>js</type><name>scriptaculous/effects.js</name></action> -->
+            <action method="removeItem"><type>js</type><name>scriptaculous/dragdrop.js</name></action>
+            <action method="removeItem"><type>js</type><name>scriptaculous/controls.js</name></action>
+            <action method="removeItem"><type>js</type><name>scriptaculous/slider.js</name></action>
+            <action method="removeItem"><type>js</type><name>varien/menu.js</name></action>
+            <action method="removeItem"><type>js</type><name>lib/ccard.js</name></action>
+            <action method="removeItem"><type>js</type><name>lib/ds-sleight.js</name></action>
+            <action method="removeItem"><type>js</type><name>mage/captcha.js</name></action>
+
+            <!-- Add Theme Assets -->
+            <action method="addItem"><type>skin_css</type><url>css/styles.css</url></action>
+            <action method="addItem"><type>skin_js</type><url>js/site.js</url></action>
+
+        </reference>
+    </default>
+</layout>

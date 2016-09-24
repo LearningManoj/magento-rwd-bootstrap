@@ -1,0 +1,20 @@
+//
+// Font Awesome
+
+$fa-version: '4.1.0';
+//$fa-font-path:        $coreFontsUri;
+$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/#{$fa-version}/fonts" !default; // for referencing Bootstrap CDN font files directly
+
+
+@import "fontawesome/variables";
+@import "fontawesome/mixins";
+@import "fontawesome/path";
+//@import "fontawesome/core";
+@import "fontawesome/larger";
+@import "fontawesome/fixed-width";
+//@import "fontawesome/list";
+//@import "fontawesome/bordered-pulled";
+//@import "fontawesome/spinning";
+//@import "fontawesome/rotated-flipped";
+//@import "fontawesome/stacked";
+@import "fontawesome/icons";

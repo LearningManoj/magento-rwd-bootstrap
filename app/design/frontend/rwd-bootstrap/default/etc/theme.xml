@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<theme>
+    <parent>rwd/default</parent>
+    <layout>
+        <updates>
+            <rwd_bootstrap>
+                <file>rwd_bootstrap.xml</file>
+            </rwd_bootstrap>
+        </updates>
+    </layout>
+</theme>
