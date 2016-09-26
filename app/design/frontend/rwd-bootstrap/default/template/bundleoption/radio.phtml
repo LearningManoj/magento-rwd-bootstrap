@@ -121,11 +121,19 @@
     });
 
 <?php if( $_optionId == 2 /* Shells */ ) : ?>
-    jQuery('#product-options-wrapper').find('.custom-options-robbie.robbie-opt-2 .radio').on('change', function(){
+    var optionsWrapper = jQuery('#product-options-wrapper');
+    optionsWrapper.find('.custom-options-robbie.robbie-opt-2 .radio:checked').each(function(){
       var key = jQuery(this).val();
-      jQuery('.bundle-product-container-option').hide();
-      jQuery('#bundle-product-container-option-' + key).show();
-      ProductMediaManager.init();
+      jQuery('.bundle-product-container-option').removeClass('bundle-option-selected');
+      jQuery('#bundle-product-container-option-' + key).addClass('bundle-option-selected');
+      jQuery('.product-img-box').trigger('changeSlides');
+    });
+    optionsWrapper.find('.custom-options-robbie.robbie-opt-2 .radio').on('change', function(){
+      var key = jQuery(this).val();
+      jQuery('.bundle-product-container-option').removeClass('bundle-option-selected');
+      jQuery('#bundle-product-container-option-' + key).addClass('bundle-option-selected');
+      jQuery('.product-img-box').trigger('changeSlides');
+      //ProductMediaManager.init();
     });
 <?php endif; ?>
   });

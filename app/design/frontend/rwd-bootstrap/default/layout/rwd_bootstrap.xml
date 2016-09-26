@@ -3,7 +3,7 @@
     <default>
 
       <reference name="head">
-        <action method="addItem"><type>skin_js</type><name>js/lib/jquery.bxslider/jquery.bxslider.min.js</name></action>
+        
       </reference>
 
       <reference name="header">
@@ -15,5 +15,14 @@
         <action method="unsetChild"><name>footer_links</name></action>
         <action method="unsetChild"><name>footer_links2</name></action>
       </reference>
+
     </default>
+    
+    <catalog_product_view>
+      <reference name="head">
+        <action method="addItem"><type>skin_js</type><name>js/lib/jquery.bxslider/jquery.bxslider.min.js</name></action>
+<!--         <action method="removeItem"><type>skin_js</type><name>js/lib/elevatezoom/jquery.elevateZoom-3.0.8.min.js</name></action> -->
+      </reference>
+    </catalog_product_view>
+
 </layout>

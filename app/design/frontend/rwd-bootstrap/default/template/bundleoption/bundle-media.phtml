@@ -26,7 +26,6 @@
 
 /**
  * Product media data template
- *
  * @see Mage_Catalog_Block_Product_View_Media
  */
 
@@ -38,50 +37,21 @@
     $selections = $this->getBundleOptionsSelectionIds();
     $i = $j = 0;
 ?>
+<div class="product-gallery-wrap"></div>
 <div id="bundle-product-container-all-options">
     <?php foreach ($selections as $selectionId) :
-        $display = $this->getDefaultSelectionId() == $selectionId ? 'block' : 'none';
         $this->setSelectionId($selectionId);
         $_product = $this->getProductBySelection();
         $this->setProduct($_product);
     ?>
-    <div class="bundle-product-container-option" id="bundle-product-container-option-<?php echo $selectionId;?>" style="display:<?php echo $display;?>">
-        <div class="product-image product-image-zoom">
-            <div class="product-image-gallery">
-                <img id="image-main"
-                     class="gallery-image visible"
-                     src="<?php echo $this->helper('catalog/image')->init($_product, 'image') ?>"
-                     alt="<?php echo $this->escapeHtml($this->getImageLabel()) ?>"
-                     title="<?php echo $this->escapeHtml($this->getImageLabel()); ?>" />
+    <div class="bundle-product-container-option" id="bundle-product-container-option-<?= $selectionId;?>">
 
-                <?php foreach ($this->getGalleryImages() as $_image): ?>
-                    <?php if ($this->isGalleryImageVisible($_image)): ?>
-                    <img id="image-<?php echo $i; ?>"
-                         class="gallery-image"
-                         src="<?php echo $this->getGalleryImageUrl($_image); ?>"
-                         data-zoom-image="<?php echo  $this->getGalleryImageUrl($_image); ?>" />
-                    <?php endif; ?>
-                <?php $i++; endforeach; ?>
-            </div>
-        </div>
+    <?php foreach ($this->getGalleryImages() as $_image): ?>
+      <?php if( $this->isGalleryImageVisible($_image) ) : ?>
+        <img data-src="<?= $this->getGalleryImageUrl($_image); ?>" />
+      <?php endif; ?>
+    <?php $i++; endforeach; ?>
 
-    <?php /* if (count($this->getGalleryImages()) > 0): ?>
-        <div class="more-views">
-            <h2><?php echo $this->__('More Views') ?></h2>
-            <ul class="product-image-thumbs">
-            <?php foreach ($this->getGalleryImages() as $_image): ?>
-                <?php if ($this->isGalleryImageVisible($_image)): ?>
-                <li>
-                    <a class="thumb-link" href="#" title="<?php echo $this->escapeHtml($_image->getLabel()) ?>" data-image-index="<?php echo $j; ?>">
-                        <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(150); ?>"
-                             width="75" height="75" alt="<?php echo $this->escapeHtml($_image->getLabel()) ?>" />
-                    </a>
-                </li>
-                <?php endif; ?>
-            <?php $j++; endforeach; ?>
-            </ul>
-        </div>
-        <?php endif; */ ?>
 
         <?php echo $this->getChildHtml('after'); ?>
     </div>
@@ -89,3 +59,42 @@
     $this->setProduct($mainProduct);
     ?>
 </div>
+<script>
+  jQuery(function($){
+    var $productImgBox = $('.product-img-box');
+  	var $gallery = null;
+  	var $gallerySlider = null;
+  	$productImgBox.on('changeSlides', function(){
+
+      if( $gallery == null ) {
+        $gallery = $('<div class="product-image-gallery">');
+        $productImgBox.find('.product-gallery-wrap').append($gallery);
+      }
+
+      var imgs = $productImgBox.find('.bundle-option-selected img');
+      var mainImg = $('<img />').attr('src', imgs.eq(0).attr('data-src'));
+      mainImg.on('load', function(){
+        $gallery.empty().append(mainImg);
+        imgs.slice(1).clone().map(function(){
+          $gallery.append(this);
+        });
+        
+      	if( $gallerySlider !== null ) {
+        	$gallerySlider.reloadSlider();
+      	} else {
+          $gallerySlider = $gallery.bxSlider({
+            mode: 'horizontal',
+            preventDefaultSwipeY: true,
+            onSlideBefore: function($slideElement, oldIndex, newIndex){
+              if( $slideElement.attr('src') == undefined ) {
+                $slideElement.attr('src', $slideElement.attr('data-src'));
+              }
+            },
+          });
+      	}
+      });
+
+      //ProductMediaManager.init();
+  	});
+  });
+</script>

@@ -33,6 +33,7 @@ body:after { content: ""; display: block; width: 1px; height: 100vh; background-
 
   .page-header-container { padding: 0px 5px; border-bottom: 1px solid #e9ecee; min-height: 60px; }
   .skip-links { display: none; }
+  .skip-link { float: none; background-color: transparent; border: none !important; }
   .nav > li > a { padding: 10px 20px; }
   .nav-primary > li > a { font-family: "GothamMedium", sans-serif; font-size: 15px; color: #83898e; padding: 0 22px !important; }
   .navbar-nav > li > a { color: #83898e; font-family: "MillerDisplayItalic", sans-serif; font-size: 15px; }
@@ -118,6 +119,7 @@ body.cms-index-index {
 
 .product-options .custom-options-robbie ul.options-list li {
   display: block; width: auto; line-height: inherit; padding: 0; position: relative; overflow: hidden;
+  label { cursor: pointer; }
   > label { display: none; padding: 0; background-color: transparent; width: auto; }
 }
 
@@ -134,12 +136,13 @@ body.cms-index-index {
 
   .product-shop .product-name { float: none; }
 
+  .product-name h1,
   .product-name .h1 {
     position: relative; margin-bottom: $trim;
     
     > small { display: block; color: #b8bcbf; font-family: $f-stack-serif; font-size: 2rem; padding-bottom: .3em; text-transform: none; }
+    &:before { content: ""; position: absolute; left: 0; top: 100%; width: 150px; max-width: 50%; height: 3px; background-color: $c-action; border-radius: 1px; }
   }
-  .product-name .h1:before { content: ""; position: absolute; left: 0; top: 100%; width: 150px; max-width: 50%; height: 3px; background-color: $c-action; border-radius: 1px; }
 
   .product-options {
     padding: 0; margin: 0; position: relative; border: none;
@@ -191,11 +194,20 @@ body.cms-index-index {
 
   .bundle-option-wrap.bundle-option-1 { display: none; /* Hide the Lock */ }
 
+  #bundle-product-container-all-options { display: none; }
+
   .product-img-box {
+    .no-touch & .product-image:hover:not(.zoom-available),
     .product-image { margin-bottom: 0; max-width: 500px; margin: 0 auto; border: none; }
     .more-views h2 { display: none; }
     .product-image-thumbs { text-align: center; }
     .product-image-thumbs li { background-color: #DCDDE3; border-radius: 500px; overflow: hidden; }
+
+    .product-gallery-wrap > .product-image-gallery img { display: none; }
+    .product-gallery-wrap > .product-image-gallery img:first-child { display: block; }
+
+    .bx-wrapper { background-color: transparent; border: none; box-shadow: none; }
+    .bx-wrapper .product-image-gallery .gallery-image { display: block; }
   }
 
   .add-to-cart.plus-minus {
@@ -266,7 +278,7 @@ body.cms-index-index {
   }
   .faqs-list.interactive {
     .faq-item {}
-    .faq-item h3 { cursor: pointer; position: relative; @include user-select(none); }
+    .faq-item h3 { cursor: pointer; position: relative; @include user-select(none); padding-right: 2em; }
     .faq-item h3:hover { color: darken(#b9bdc0,10%); }
     .faq-item h3:before { @extend %fa; @extend %fa-plus; position: absolute; right: 1rem; top: 50%; @include translate(0%, -50%);
       text-align: center; border: 2px solid currentColor; font-size: 1.2rem; width: 2.2rem; height: 2.2rem; line-height: 1.8rem; border-radius: 500px; }
@@ -282,5 +294,50 @@ body.cms-index-index {
   .lock-video-wrap:before { content: ""; display: block; padding-bottom: 56.25%; }
   iframe { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
 }
+
+
+
+
+/* -------------------------------------------------- */
+/* !- MediaQueries (smaller after bigger) */
+
+@include bp(max-width, $bp-medium) {
+  
+  .page-header { margin: 0; padding-bottom: $trim; }
+  
+  .main-container { padding: 0 $trim $trim*2; }
+
+  .catalog-product-view .product-img-box { padding: 0; }
+  .catalog-product-view .product-image-gallery img { padding: 0 $trim; }
+
+  .fridaylock-product .col-main section h2.title { font-size: 3rem; }
+
+}
+
+@include bp(max-width, $bp-small) {
+
+  .fridaylock-product {
+    .col-main section h2.title { font-size: 2.5rem; }
+
+
+    .product-options-bottom {
+      display: block; margin-top: $trim; padding: 0 0 $trim-small; 
+      > div { display: block; }
+      .price-box { width: 100% !important; padding-bottom: $trim-small; }
+      .add-to-cart { width: 100% !important; }
+    }
+
+
+  }
+
+}
+
+
+
+@include bp(max-width, $bp-xsmall) {}
+
+
+
+
 
 
