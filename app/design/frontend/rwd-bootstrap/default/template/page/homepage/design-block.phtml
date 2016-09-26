@@ -1,0 +1,104 @@
+<section class="top-design-block col-lg-12 col-md-12 col-sm-12">
+    <div class="left-block col-lg-6 col-md-6 col-sm-6">
+        <h3 class="first-title">
+            <?php echo $this->__('Design'); ?>
+        </h3>
+        <h2 class="second-title">
+            <?php echo $this->__('The world\'s smallest lock'); ?>
+        </h2>
+        <p class="selection-text">
+            <?php echo $this->__('At only 3`` wide and no externa; wifi units needed Friday will tale up as little doorspace sa needed.'); ?>
+        </p>
+        <p class="sizes">
+            <span class="left-span">
+                <?php echo $this->__('8cm (Average coffe cup)'); ?>
+            </span>
+            <span class="right-span">
+                <?php echo $this->__('7,8cm (Sesame diameter)'); ?>
+            </span>
+        </p>
+    </div>
+    <div class="right-block col-lg-6 col-md-6 col-sm-6">
+        <h3 class="first-title">
+            <?php echo $this->__('Design'); ?>
+        </h3>
+        <h2 class="second-title">
+            <?php echo $this->__('Scandinavian design'); ?>
+        </h2>
+        <p class="selection-text">
+            <?php echo $this->__('Designed in Denmark by the world famous Bjarke Ingels Group there\'s no wonder why it looks <br/> so good.'); ?>
+        </p>
+    </div>
+</section>
+<section class="bottom-design-block col-lg-12 col-md-12 col-sm-12">
+    <div class="text">
+        <h3 class="first-title">
+            <?php echo $this->__('Design'); ?>
+        </h3>
+        <h2 class="second-title">
+            <?php echo $this->__('Interchangable shells'); ?>
+        </h2>
+        <p class="selection-text">
+            <?php echo $this->__('Friday features interchangable shells all made out of natural ma&shy;terials, to fit perfectly in any home.'); ?>
+        </p>
+    </div>
+    <div class="btn-example">
+        <p>
+            <img id="example-btn" src="<?php echo $this->getSkinUrl('images/homepage/buttons/black.png'); ?>">
+        </p>
+    </div>
+    <div class="lock-btns col-lg-12 col-md-12 col-sm-12">
+        <p class="col-lg-3 col-md-3 col-sm-3">
+            <img id="steel-btn" src="<?php echo $this->getSkinUrl('images/homepage/buttons/steel.png'); ?>">
+            <span>
+            Steel
+            </span>
+        </p>
+        <p class="col-lg-3 col-md-3 col-sm-3">
+            <img id="brass-btn" src="<?php echo $this->getSkinUrl('images/homepage/buttons/bronze.png'); ?>">
+            <span>
+                Brass
+            </span>
+        </p>
+        <p class="col-lg-3 col-md-3 col-sm-3">
+            <img class="active-lock-btn" id="black-btn" src="<?php echo $this->getSkinUrl('images/homepage/buttons/black.png'); ?>">
+            <span class="active_span">
+                Gun metal
+            </span>
+        </p>
+        <p class="col-lg-3 col-md-3 col-sm-3">
+            <img id="copper-btn" src="<?php echo $this->getSkinUrl('images/homepage/buttons/copper.png'); ?>">
+            <span>
+                cooper
+            </span>
+        </p>
+        <p class="col-lg-3 col-md-3 col-sm-3">
+            <img id="white-btn" src="<?php echo $this->getSkinUrl('images/homepage/buttons/white.png'); ?>">
+            <span>
+                porcelain
+            </span>
+        </p>
+    </div>
+</section>
+
+<script>
+    (function($){
+        $(document).ready(function(){
+            var black_btn = $('#black-btn');
+            var steel_btn = $('#steel-btn');
+            var brass_btn = $('#brass-btn');
+            var copper_btn = $('#copper-btn');
+            var white_btn = $('#white-btn');
+            var example_btn = $('#example-btn');
+            var lock_btn = $('.lock-btns p');
+
+            lock_btn.on('click', function () {
+                $('.lock-btns').find('.active-lock-btn').removeClass('active-lock-btn');
+                $('.lock-btns').find('.active_span').removeClass('active_span');
+                $(this).find('img').addClass('active-lock-btn');
+                $(this).find('span').addClass('active_span');
+                example_btn.attr('src', $(this).find('img').attr('src'));
+            });
+        })
+    })(jQuery)
+</script>

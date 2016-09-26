@@ -9,7 +9,7 @@ $fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/#{$fa-version}/fon
 @import "fontawesome/variables";
 @import "fontawesome/mixins";
 @import "fontawesome/path";
-//@import "fontawesome/core";
+@import "fontawesome/core";
 @import "fontawesome/larger";
 @import "fontawesome/fixed-width";
 //@import "fontawesome/list";
@@ -18,3 +18,9 @@ $fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/#{$fa-version}/fon
 //@import "fontawesome/rotated-flipped";
 //@import "fontawesome/stacked";
 @import "fontawesome/icons";
+
+
+/* -------------------------------------------------- */
+/* !- Activate Icons */
+
+.fa-envelope { @extend %fa-envelope; }

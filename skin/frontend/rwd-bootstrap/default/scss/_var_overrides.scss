@@ -1,0 +1,19 @@
+
+$f-stack-sans: 'AvenirRegular', sans-serif;
+$f-stack-serif: "MillerDisplayItalic", sans-serif;
+//$f-stack-special: "GothamBook", sans-serif;
+$f-stack-special: $f-stack-sans;
+
+$c-action: #EC2426;
+$c-text-primary: #EC2426;
+
+
+$max-content-width: 1300px;
+
+
+// Buttons
+
+$c-button: $c-action;
+$c-button-hover: darken($c-button, 5%) !default;
+$c-button-active: darken($c-button, 10%) !default;
+

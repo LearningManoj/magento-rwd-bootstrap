@@ -1,0 +1,73 @@
+<section class="lock-faqs">
+  <div class="lock-faqs-wrap">
+    <h2 class="title">Frequently asked questions</h2>
+    <div class="faqs-list">
+
+      <div class="faq-item">
+        <h3><?php echo $this->__('How do I know Friday Lock will fit my door?'); ?></h3>
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3><?php echo $this->__('How long does installation take?'); ?></h3>
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3><?php echo $this->__('How long does the battery last?'); ?></h3>
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3><?php echo $this->__('Does my lock still function if WIFI isn\'t working?'); ?></h3>
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3><?php echo $this->__('Can I still unlock my door if I don\'t have my phone?'); ?></h3>
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3><?php echo $this->__('Can I have multiple lock on the same WIFI network?'); ?></h3>
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    var $faqs = $('.faqs-list');
+    $faqs.on('click', 'h3', function(ev){
+      var $faq = $(ev.target).closest('.faq-item');
+      $faq.toggleClass('state-open');
+    });
+    $faqs.addClass('interactive');
+  });
+</script>
+

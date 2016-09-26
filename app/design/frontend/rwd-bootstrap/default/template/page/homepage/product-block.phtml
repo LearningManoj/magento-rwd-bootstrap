@@ -1,0 +1,70 @@
+<section class="products-block col-lg-12 col-md-12 col-sm-12">
+    <div class="col-lg-8 col-md-8 col-sm-8">
+        <img id="selected-item" src="<?php echo $this->getSkinUrl('images/homepage/Box-8-HeroProduct-1.png'); ?>">
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <h3 class="first-title">
+            <?php echo $this->__('Buy'); ?>
+        </h3>
+        <h2 class="second-title">
+            <?php echo $this->__('Friday Lock'); ?>
+        </h2>
+        <p class="selection-text">
+            <?php echo $this->__('Select Shell Material'); ?>
+        </p>
+        <div class="items-block col-lg-12 col-md-12 col-sm-12">
+            <?php
+            $product_id = 1;
+            while ($product_id<=5){                ?>
+            <p class="item">
+                <?php
+               /* $product_id = 5; //This is the product ID of the product, not the product SKU.*/
+                $product = Mage::getModel('catalog/product')->load($product_id);
+                $formattedPrice = Mage::helper('core')->currency($product->getPrice(), true, false);
+                ?>
+            <img class="select-item" src="<?php echo $product->getImageUrl(); ?>">
+                <?php if($product_id == 1){
+                    echo '<span class="active_span">';
+                }
+                else{
+                    echo '<span>';
+                }
+                 echo $product->getName(); ?>
+                </span>
+            <a class="add-to-cart-hide" href="<?php echo Mage::helper('checkout/cart')->getAddUrl($product) ?>">
+
+					                <span>
+					                    <?php echo $this->__('Add to Cart'); ?>
+					                </span>
+            </a>
+            <?php $product->reset(); ?>
+            </p>
+          <?php
+                $product_id++;
+            }
+            ?>
+        </div>
+        <a class="buy_now continue-btn" href="#continue">
+            Continue
+        </a>
+    </div>
+
+</section>
+
+<script>
+    (function($){
+        $(document).ready(function(){
+            var select_btn = $('.select-item');
+            var lock_btn = $('.lock-btns p');
+            var continue_btn = $('.continue-btn');
+            var big_img = $('#selected-item');
+
+            select_btn.on('click', function () {
+                $('.items-block').find('.active_span').removeClass('active_span');
+                $(this).parent().find('span').addClass('active_span');
+                continue_btn.attr('href', $(this).parent().find('.add-to-cart-hide').attr('href'));
+                big_img.attr('src', $(this).attr('src'));
+            });
+        })
+    })(jQuery)
+</script>

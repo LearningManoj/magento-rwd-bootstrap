@@ -1,5 +1,19 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
     <default>
+
+      <reference name="head">
+        <action method="addItem"><type>skin_js</type><name>js/lib/jquery.bxslider/jquery.bxslider.min.js</name></action>
+      </reference>
+
+      <reference name="header">
+        <block type="core/template" name="bottom_menu" as="bottom_menu" template="page/html/bottom_menu.phtml"/>
+      </reference>
+
+      <reference name="footer">
+        <action method="unsetChild"><name>store_switcher</name></action>
+        <action method="unsetChild"><name>footer_links</name></action>
+        <action method="unsetChild"><name>footer_links2</name></action>
+      </reference>
     </default>
 </layout>

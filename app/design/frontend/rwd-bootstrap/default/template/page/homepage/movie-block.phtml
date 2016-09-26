@@ -1,0 +1,93 @@
+<section class="movie-block">
+    <iframe class="video" id="yt" src="https://www.youtube.com/embed/0KPew-IxtX4" frameborder="0" allowfullscreen></iframe>
+    <h3 class="first-title">
+        <?php echo $this->__('Meet Friday'); ?>
+    </h3>
+    <h2 class="second-title">
+        <?php echo $this->__('The Worlds\'s smallest smartlock'); ?>
+    </h2>
+    <p class="selection-text">
+        <?php echo $this->__('Friday\'s size, design and functionality sets it apart from the rest, find out what it can do for you!'); ?>
+    </p>
+    <p class="shopping-now">
+        <?php echo $this->__('Now shipping!'); ?>
+    </p>
+
+    <a href="#buy" class="buy_now">
+        <?php echo $this->__('Buy now'); ?>
+    </a>
+
+    <br/>
+
+    <a href="#play" id="play-video" class="play-movie">
+        <i class="fa fa-play play-btn"> <?php echo $this->__('Play movie'); ?> </i>
+        <i class="fa fa-stop stop-btn"> <?php echo $this->__('Hide movie'); ?> </i>
+    </a>
+</section>
+
+<script src="//www.youtube.com/player_api"></script>
+<script>
+    (function($){
+        $(document).ready(function(){
+
+            /**
+             * Variables
+             */
+
+            var play_video = $('#play-video');
+            var movie_block = $('.movie-block');
+            var play = $('.play-btn');
+            var stop = $('.stop-btn');
+            var flag = true;
+            var first_title = $('.first-title');
+            var second_title = $('.second-title');
+            var selection_text = $('.selection-text');
+            var shopping_now = $('.shopping-now');
+            var buy_now = $('.buy_now');
+            var video = $("#yt");
+
+            /**
+             * Video on homepage
+             */
+
+            play_video.on('click', function () {
+                if(flag){
+                    play_video.css({'margin-top' : '15px'});
+                    first_title.hide();
+                    second_title.hide();
+                    shopping_now.hide();
+                    buy_now.hide();
+                    selection_text.hide();
+                    play.hide();
+                    stop.show();
+                    play_video.show();
+                    video[0].src += '?showinfo=0&controls=0&modestbranding=1&loop=1&playlist=0KPew-IxtX4&autoplay=1';
+                 //   setTimeout(function(){ video.show(); }, 200);
+                    video.show();
+                    flag = !flag;
+                }
+                else{
+                    flag = !flag;
+                    if($(window).width() > 630){
+                        play_video.css({'margin-top' : '145px'});
+                    }
+                    else{
+                        play_video.css({'margin-top' : '15px'});
+                    }
+
+                    video.hide();
+                    first_title.show();
+                    second_title.show();
+                    video[0].src += '?showinfo=0&controls=0&modestbranding=1&loop=1&playlist=0KPew-IxtX4&autoplay=0';
+                    shopping_now.show();
+                    buy_now.show();
+                    selection_text.show();
+                    play.show();
+                    stop.hide();
+                    video.hide();
+                }
+
+            })
+        });
+    })(jQuery)
+</script>

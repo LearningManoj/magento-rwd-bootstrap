@@ -1,18 +1,21 @@
-
 // =============================================
-// Compass Defaults
+
+
+// OVERRIDE THESE VARS IN _var_overrides.scss
+
+
 // =============================================
 
 // Border Radius
 
-$default-border-radius: 5px;
+$default-border-radius: 5px !default;
 
 // Transition
 
-$default-transition-property: all;
-$default-transition-duration: 200ms;
-$default-transition-function: linear;
-$default-transition-delay: 0;
+$default-transition-property: all !default;
+$default-transition-duration: 200ms !default;
+$default-transition-function: linear !default;
+$default-transition-delay: 0 !default;
 
 // =============================================
 // Primary Break Points
@@ -22,11 +25,11 @@ $default-transition-delay: 0;
 // where a min-width is used, remember to +1 to break correctly.
 // If these are changed, they must also be updated in app.js
 
-$bp-xsmall:         479px;
-$bp-small:          599px;
-$bp-medium:         767px;
-$bp-large:          979px;
-$bp-xlarge:         1199px;
+$bp-xsmall:         479px !default;
+$bp-small:          599px !default;
+$bp-medium:         767px !default;
+$bp-large:          979px !default;
+$bp-xlarge:         1199px !default;
 
 // =============================================
 // Base Values
@@ -34,26 +37,26 @@ $bp-xlarge:         1199px;
 
 // Spacing
 
-$gap: 10px;
+$gap: 10px !default;
 
-$trim: 30px;
+$trim: 30px !default;
 // This will get applied on viewports smaller than 480px
-$trim-small: 15px;
+$trim-small: 15px !default;
 
 // Padding that will get applied to content areas
-$box-spacing-large: 20px;
+$box-spacing-large: 20px !default;
 
 // Standard padding around box elements such as banner messages, etc
-$box-spacing: 10px;
+$box-spacing: 10px !default;
 
 // Standard spacing between elements within a box, such as "Add to cart", "Price box", etc
-$element-spacing: 7px;
+$element-spacing: 7px !default;
 
 // Dimensions
 
-$max-content-width: 1200px;
-$max-container-width: $trim + $max-content-width + $trim;
-$max-std-formatted-width: 50em;
+$max-content-width: 1200px !default;
+$max-container-width: $trim + $max-content-width + $trim !default;
+$max-std-formatted-width: 50em !default;
 // =============================================
 // Brand Colors
 // =============================================
@@ -61,14 +64,14 @@ $max-std-formatted-width: 50em;
 // Usually not used directly in Sass partials.
 // Only used to define context-based color vars in this file.
 
-$c-blue: #F3793B;
-$c-green: #11B400;
-$c-pink: #D85378;
-$c-orange: #F3793B;
-$c-red: #CF5050;
-$c-yellow: #FFDD15;
-$c-black: #000000;
-$c-gray: #333333;
+$c-blue: #3399CC !default;
+$c-green: #11B400 !default;
+$c-pink: #D85378 !default;
+$c-orange: #F3793B !default;
+$c-red: #CF5050 !default;
+$c-yellow: #FFDD15 !default;
+$c-black: #000000 !default;
+$c-gray: #333333 !default;
 
 // =============================================
 // Base Colors
@@ -76,35 +79,35 @@ $c-gray: #333333;
 
 // Text
 
-$c-text: #636363;
-$c-text-gray: #A0A0A0;
-$c-text-white: #E6E6E6;
+$c-text: #636363 !default;
+$c-text-gray: #A0A0A0 !default;
+$c-text-white: #E6E6E6 !default;
 // Primary font color for headings and other non-link text
-$c-text-primary: $c-blue;
+$c-text-primary: $c-blue !default;
 
 
 // Interaction
 
-$c-action: $c-blue;
-$c-stimulus: darken($c-blue, 15%);
-$c-subtle: #A0A0A0;
+$c-action: $c-blue !default;
+$c-stimulus: darken($c-blue, 15%) !default;
+$c-subtle: #A0A0A0 !default;
 
 // Notifications
 
-$c-danger: #DF280A;
-$c-danger-background: #FAEBE7;
+$c-danger: #DF280A !default;
+$c-danger-background: #FAEBE7 !default;
 
-$c-success: $c-green;
-$c-success-background: #EFF5EA;
+$c-success: $c-green !default;
+$c-success-background: #EFF5EA !default;
 
-$c-warn: #E26703;
-$c-warn-background: #F9EBE6;
+$c-warn: #E26703 !default;
+$c-warn-background: #F9EBE6 !default;
 
-$c-dark: #676157;
+$c-dark: #676157 !default;
 
 // Global Elements
 
-$c-divider-border: #ECECEC;
+$c-divider-border: #ECECEC !default;
 
 // =============================================
 // Element Colors
@@ -112,78 +115,78 @@ $c-divider-border: #ECECEC;
 
 // Buttons
 
-$c-button: $c-blue;
-$c-button-hover: darken($c-blue, 5%);
-$c-button-active: darken($c-blue, 10%);
+$c-button: $c-blue !default;
+$c-button-hover: darken($c-blue, 5%) !default;
+$c-button-active: darken($c-blue, 10%) !default;
 
 // Secondary Buttons
 
-$c-button-secondary: #DDDDDD;
-$c-button-secondary-hover: darken(#DDDDDD, 5%);
-$c-button-secondary-active: darken(#DDDDDD, 10%);
+$c-button-secondary: #DDDDDD !default;
+$c-button-secondary-hover: darken(#DDDDDD, 5%) !default;
+$c-button-secondary-active: darken(#DDDDDD, 10%) !default;
 
-$c-button-subtle: #ECECEC;
+$c-button-subtle: #ECECEC !default;
 
 // Forms
 
-$c-input-border: #C0C0C0;
-$c-input-border-focus: $c-blue;
+$c-input-border: #C0C0C0 !default;
+$c-input-border-focus: $c-blue !default;
 
-$c-input-placeholder: $c-text-gray;
-$c-input-text: $c-text;
+$c-input-placeholder: $c-text-gray !default;
+$c-input-text: $c-text !default;
 
-$c-fieldset-border: #CCCCCC;
-$c-fieldset-border-light: #EDEDED;
+$c-fieldset-border: #CCCCCC !default;
+$c-fieldset-border-light: #EDEDED !default;
 
 // Headings
 
-$c-h1: $c-blue;
-$c-h2: $c-text;
-$c-h3: $c-text;
-$c-h4: $c-text;
-$c-h5: $c-text;
-$c-h6: $c-text;
+$c-h1: $c-blue !default;
+$c-h2: $c-text !default;
+$c-h3: $c-text !default;
+$c-h4: $c-text !default;
+$c-h5: $c-text !default;
+$c-h6: $c-text !default;
 
 // Link
-$c-link: $c-action;
-$c-link-hover: darken($c-action, 5%);
-$c-link-focus: $c-action;
-$c-link-active: darken($c-action, (5% / 2));
+$c-link: $c-action !default;
+$c-link-hover: darken($c-action, 5%) !default;
+$c-link-focus: $c-action !default;
+$c-link-active: darken($c-action, (5% / 2)) !default;
 
 // Module (generic)
 
-$c-module-background: #F4F4F4;
-$c-module-background-hover: shade($c-module-background, 3%);
-$c-module-background-secondary: #EAF8FF;
-$c-module-background-dark: #AAAAAA;
+$c-module-background: #F4F4F4 !default;
+$c-module-background-hover: shade($c-module-background, 3%) !default;
+$c-module-background-secondary: #EAF8FF !default;
+$c-module-background-dark: #AAAAAA !default;
 // This should be applied whenever the border is surrounding a white element and/or is directly showing on white.
-$c-module-border: #CCCCCC;
+$c-module-border: #CCCCCC !default;
 // This should be applied whenever the border is wrapping an element with $c-module-background
-$c-module-border-light: #EDEDED;
-$c-module-border-dark: #777777;
-$c-module-border-highlight: $c-blue;
+$c-module-border-light: #EDEDED !default;
+$c-module-border-dark: #777777 !default;
+$c-module-border-highlight: $c-blue !default;
 
 
 // Table
 
-$c-table-background: #F4F4F4;
-$c-table-border: #C0C0C0;
+$c-table-background: #F4F4F4 !default;
+$c-table-border: #C0C0C0 !default;
 
-$c-table-zebra-odd: #F8F7F5;
-$c-table-zebra-even: #EEEDED;
+$c-table-zebra-odd: #F8F7F5 !default;
+$c-table-zebra-even: #EEEDED !default;
 
 // Tabs
 
-$c-tabs-background: #F0F0F0;
+$c-tabs-background: #F0F0F0 !default;
 
 // Email
-$c-email-background: #EBEBEB;
-$c-email-background-secondary: #E1F0F8;
-$c-email-border: #C3CED4;
-$c-email-action: #3696C2;
-$c-email-cell: #F1F1F1;
-$c-email-highlighted-background: #FFFDD9;
-$c-email-highlighted-border: #FFF74C;
+$c-email-background: #EBEBEB !default;
+$c-email-background-secondary: #E1F0F8 !default;
+$c-email-border: #C3CED4 !default;
+$c-email-action: #3696C2 !default;
+$c-email-cell: #F1F1F1 !default;
+$c-email-highlighted-background: #FFFDD9 !default;
+$c-email-highlighted-border: #FFF74C !default;
 
 // =============================================
 // Typography
@@ -193,25 +196,25 @@ $c-email-highlighted-border: #FFF74C;
 
 // Font Stacks
 
-$f-stack-sans: 'Helvetica Neue', Verdana, Arial, sans-serif;
-$f-stack-serif: Georgia, Times, 'Times New Roman', serif;
-$f-stack-special: 'Raleway', 'Helvetica Neue', Verdana, Arial, sans-serif;
+$f-stack-sans: 'Helvetica Neue', Verdana, Arial, sans-serif !default;
+$f-stack-serif: Georgia, Times, 'Times New Roman', serif !default;
+$f-stack-special: 'Raleway', 'Helvetica Neue', Verdana, Arial, sans-serif !default;
 
-$f-stack-default: $f-stack-sans;
+$f-stack-default: $f-stack-sans !default;
 
 // Font Sizes
 
-$f-size-xxl: 18px;
-$f-size-xl: 16px;
-$f-size-l: 15px;
+$f-size-xxl: 18px !default;
+$f-size-xl: 16px !default;
+$f-size-l: 15px !default;
 
-$f-size: 14px;
+$f-size: 14px !default;
 
-$f-size-s: 13px;
-$f-size-xs: 12px;
-$f-size-xxs: 11px;
+$f-size-s: 13px !default;
+$f-size-xs: 12px !default;
+$f-size-xxs: 11px !default;
 
 // Base Measures
 
-$b-line-height: 1.5;
-$b-margin-bottom: 1.5em;
+$b-line-height: 1.5 !default;
+$b-margin-bottom: 1.5em !default;
