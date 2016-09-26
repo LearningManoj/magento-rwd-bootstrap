@@ -70,13 +70,21 @@ body:after { content: ""; display: block; width: 1px; height: 100vh; background-
   .footer .block-subscribe .text span { text-transform: uppercase; font-size: 12px; margin-right: 15px; letter-spacing: 1px; }
   .footer .block-subscribe .block-content { display: inline-block; position: relative; padding: 0; margin: 0; }
   .footer .block-subscribe .actions { position: absolute; width: auto !important; right: 0; top: 50%; @include translate(0, -50%); }
-  .footer .block-subscribe .actions .button { color: #3c3d41; background-color: transparent; width: 40px; padding: 0; height: 30px; vertical-align: middle; }
+  .footer .block-subscribe .actions .button { color: #84898f; background-color: transparent; width: 40px; padding: 0; height: 30px; vertical-align: middle; }
   .footer .block-subscribe .input-box { float: none; width: 180px; }
   .footer .block-subscribe .input-text { padding-right: 30px; border: 0; border-radius: 500px; background-color: #EBECEF; }
   .social-networks { display: inline-block; margin-bottom: 25px; }
   .social-networks ul,
-  .social-networks ul li { display: inline-block; margin: 0px 10px; }
-  .social-networks ul li a:hover img { opacity: 0.75; }
+  .social-networks ul li { display: inline-block; vertical-align: middle; margin: 0 5px; }
+  .social-networks a { display: block; color: #fff; background-color: #84898f; opacity: .5; border-radius: 500px; text-align: center; 
+    width: 3rem; height: 3rem; line-height: 3rem; font-size: 1.6rem; }
+  .social-networks a:before { @extend %fa; line-height: inherit; }
+  .social-networks a:hover { opacity: 1; }
+  .social-networks .facebook a { @extend %fa-facebook; }
+  .social-networks .twitter a { @extend %fa-twitter; }
+  .social-networks .instagram a { @extend %fa-instagram; }
+  .social-networks a span { display: none; }
+  
 }
 
 
