@@ -1,0 +1,986 @@
+
+/* -------------------------------------------------- */
+/* !- HARD CHANGES (imported from styles.css) */
+
+
+.selection-text {
+    font-family: 'AvenirBook', sans-serif;
+    color: #fff;
+    text-align: left;
+    max-width: 335px;
+    display: inline-block;
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+.first-title {
+    font-family: 'MillerDisplayItalic', sans-serif;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.second-title {
+    font-family: 'GothamBook', sans-serif;
+    color: #fff;
+    font-size: 33px;
+    max-width: 341px;
+}
+
+.second-title:after {
+    content: ' ';
+    border-bottom: 3px #fff solid;
+    display: block;
+    position: relative;
+    width: 147px;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 480px) {
+  .skip-cart { min-width: 45px; }
+}
+@media (min-width: 770px) {
+  .skip-links { display: none; }
+}
+
+
+
+
+.buy_now {
+    font-family: 'AvenirLight', sans-serif !important;
+    color: #fff !important;
+    background-color: #f03f39;
+    padding: 2px 13px !important;
+    border-radius: 20px;
+    letter-spacing: 0.2px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.main-container > .main > .col-main > .std > .page-title > h2 {
+    display: none;
+}
+
+/**
+* Movie Block Styles
+*/
+
+.movie-block {
+    color: #fff;
+    background-image: url('../images/homepage/Intro-bckgrd.jpg');
+    text-align: center;
+}
+
+.movie-block > .first-title {
+    padding-top: 160px;
+    font-family: 'MillerDisplayItalic', sans-serif;
+    color: #fff;
+    font-size: 24px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.movie-block > .second-title {
+    font-family: 'GothamBook', sans-serif;
+    color: #fff;
+    line-height: 1;
+    max-width: 600px;
+    margin: auto;
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.movie-block > .second-title:after {
+    content: ' ';
+    border-bottom: 2px red solid;
+    display: block;
+    position: relative;
+    width: 127px;
+    margin: auto;
+    margin-top: 17px;
+}
+
+.movie-block > .selection-text {
+    font-family: 'AvenirBook', sans-serif;
+    font-size: 21px;
+    max-width: 470px;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.movie-block > .shopping-now {
+    font-family: 'GothamBook', sans-serif;
+    font-size: 27px;
+    color: #e7302d;
+    margin-top: 15px;
+}
+
+.movie-block > .buy_now {
+    font-size: 18px;
+    padding: 2px 15px !important;
+}
+
+.movie-block > .play-movie {
+    font-family: 'AvenirBook', sans-serif;
+    font-size: 21px;
+    color: #fefefe;
+    text-transform: capitalize;
+    margin-top: 145px;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.movie-block .stop-btn {
+    display: none;
+}
+
+.movie-block > .video {
+    width: 100%;
+    height: 100%;
+    min-height: 688px;
+    object-fit: cover;
+    z-index: 1;
+    position: relative;
+}
+
+#yt {
+    display: none;
+}
+
+@media (max-width: 630px) {
+    .movie-block > .video {
+        min-height: 350px;
+    }
+
+    .movie-block > .play-movie {
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+
+    .movie-block > .first-title {
+        padding-top: 25px;
+    }
+}
+
+@media (max-width: 630px) {
+    .movie-block > .video {
+        min-height: 240px;
+    }
+}
+
+/**
+* Keyless Block
+*/
+
+.keyless-block {
+    background-image: url('../images/homepage/Keyless.jpg');
+    margin-top: 10px;
+    padding: 40px;
+    min-height: 700px;
+}
+
+.keyless-block > .first-title {
+    font-family: 'MillerDisplayItalic', sans-serif;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.keyless-block > .second-title {
+    font-family: 'GothamBook', sans-serif;
+    color: #fff;
+    font-size: 33px;
+    max-width: 341px;
+}
+
+.keyless-block > .second-title:after {
+    content: ' ';
+    border-bottom: 3px #fff solid;
+    display: block;
+    position: relative;
+    width: 147px;
+    margin-top: 10px;
+}
+
+.keyless-block > .selection-text {
+    font-family: 'AvenirBook', sans-serif;
+    font-size: 21px;
+    color: #fff;
+    line-height: 1.25;
+    max-width: 341px;
+}
+
+/**
+* Friday-App Block
+*/
+
+.friday-app-block {
+    margin-top: 10px;
+    padding: 0;
+}
+
+.friday-app-block > .sharing-block {
+    background-image: url('../images/homepage/Sharing-right.jpg');
+    min-height: 700px;
+    text-align: right;
+    padding: 40px;
+}
+
+.friday-app-block > .sharing-block > .first-title {
+    font-family: 'MillerDisplayItalic', sans-serif;
+    color: #fff;
+    text-transform: capitalize;
+    max-width: 270px;
+    font-size: 24px;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.friday-app-block > .sharing-block > .second-title {
+    font-family: 'GothamBook', sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-size: 33px;
+    max-width: 270px;
+    text-align: left;
+}
+
+.friday-app-block > .sharing-block > .second-title:after {
+    content: ' ';
+    border-bottom: 3px #fff solid;
+    display: block;
+    position: relative;
+    width: 147px;
+    margin-top: 5px;
+}
+
+.friday-app-block > .sharing-block > .selection-text {
+    font-family: 'AvenirBook', sans-serif;
+    color: #fff;
+    max-width: 270px;
+    text-align: left;
+    display: inline-block;
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+.friday-app-block > .friday-app > .first-title {
+    font-family: 'GothamBook', sans-serif;
+    color: #fff;
+    font-size: 33px;
+}
+
+.friday-app-block > .friday-app > .first-title:after {
+    content: ' ';
+    border-bottom: 3px #fff solid;
+    display: block;
+    position: relative;
+    width: 147px;
+    margin-top: 10px;
+}
+
+.friday-app-block > .friday-app > .selection-text {
+    font-family: 'AvenirBook', sans-serif;
+    font-size: 21px;
+    color: #FFF;
+    width: 100%;
+    margin-top: 20px;
+    max-width: 315px;
+    text-transform: initial;
+}
+
+.friday-app-block > .friday-app {
+    background-image: url('../images/homepage/App-left.jpg');
+    min-height: 700px;
+    border-right: 10px solid #fff;
+    padding: 15px 30px;
+}
+
+.friday-app-block > .friday-app .view_app {
+    margin: auto;
+    max-width: 115px;
+    margin-top: 460px;
+    display: block;
+    font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+    .friday-app-block > .friday-app .view_app {
+        margin-top: 340px;
+    }
+}
+
+@media (max-width: 768px) {
+    .friday-app-block > .friday-app .view_app {
+        margin-top: 460px;
+    }
+
+    .friday-app-block > .friday-app {
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 10px;
+        border-right: none;
+    }
+
+    .friday-app-block > .friday-app > .first-title:after, .friday-app-block > .friday-app > .selection-text {
+        margin: auto;
+    }
+
+}
+
+/**
+* Control Block
+*/
+
+.control-block {
+    background-image: url('../images/homepage/Box-4---Control.jpg');
+    margin-top: 10px;
+    min-height: 700px;
+}
+
+.control-block > .control {
+    float: right;
+    padding: 35px;
+    padding-left: 65px;
+    padding-right: 0px;
+}
+
+.control-block > .control > .first-title {
+    font-family: 'MillerDisplayItalic', sans-serif;
+    color: #fff;
+    text-transform: capitalize;
+    max-width: 270px;
+    font-size: 24px;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.control-block > .control > .second-title {
+    font-family: 'GothamBook', sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-size: 33px;
+    text-align: left;
+}
+
+.control-block > .control > .second-title:after {
+    content: ' ';
+    border-bottom: 3px #fff solid;
+    display: block;
+    position: relative;
+    width: 147px;
+    margin-top: 5px;
+}
+
+.control-block > .control > .selection-text {
+    font-family: 'AvenirBook', sans-serif;
+    color: #fff;
+    text-align: left;
+    max-width: 335px;
+    display: inline-block;
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+.time-block {
+    width: 70%;
+    text-align: right;
+    color: #fff;
+    margin-top: 75px;
+}
+
+.time-block h2 {
+    font-family: 'MillerDisplayItalic', sans-serif;
+    color: #fff;
+    font-size: 90px;
+    text-transform: lowercase;
+    margin-bottom: 10px;
+}
+
+.time-block > div {
+    width: 73%;
+    text-align: left;
+    padding-right: 0;
+    float: right;
+}
+
+.time-block > div > h2:after {
+    content: ' ';
+    border-bottom: 3px #fff solid;
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.time-block .text {
+    font-family: 'AvenirBook', sans-serif;
+    font-size: 27px;
+}
+
+@media (max-width: 1024px) {
+    .time-block, .time-block > div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 485px) {
+    .time-block h2 {
+        line-height: 72px;
+    }
+}
+
+/**
+* Design Block
+*/
+
+.top-design-block {
+    padding: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.top-design-block > .left-block {
+    background-image: url('../images/homepage/Box-5--left.jpg');
+    background-position: center;
+    padding: 35px 45px;
+    border-right: 5px solid #fff;
+    min-height: 700px;
+}
+
+.top-design-block > .right-block {
+    background-image: url('../images/homepage/Box-5--Right.jpg');
+    background-position: center;
+    min-height: 700px;
+    padding: 35px 55px;
+    border-left: 5px solid #fff;
+}
+
+.bottom-design-block {
+    background-position: center;
+    background-image: url('../images/homepage/Box-6--Shells.jpg');
+    min-height: 700px;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+.bottom-design-block > .text {
+    padding: 35px;
+}
+
+.bottom-design-block > .text > .selection-text {
+    position: relative;
+    z-index: 9;
+}
+
+.top-design-block > .right-block > .selection-text {
+    max-width: 210px;
+}
+
+.top-design-block > .left-block .sizes {
+    margin-top: 350px;
+    font-family: 'MillerDisplayItalic', sans-serif;
+    color: #fff;
+    font-size: 16px;
+}
+
+.top-design-block > .left-block .sizes > .left-span {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    max-width: 225px;
+}
+
+.top-design-block > .left-block .sizes > .right-span {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    float: right;
+    max-width: 225px;
+    border-left: none;
+}
+
+@media (max-width: 871px) {
+
+    .top-design-block > .left-block .sizes {
+        margin-top: 340px;
+    }
+}
+
+@media (max-width: 871px) {
+
+    .top-design-block > .left-block .sizes {
+        margin-top: 315px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .top-design-block > .left-block .sizes {
+        margin-top: 350px;
+    }
+
+    .top-design-block > .left-block {
+        background-repeat: no-repeat;
+        margin: auto;
+        background-position: center;
+        border-right: none;
+        margin-bottom: 10px;
+    }
+
+    .top-design-block > .right-block {
+        background-repeat: no-repeat;
+        margin: auto;
+        background-position: center;
+        border-left: none;
+        margin-bottom: 10px;
+    }
+
+    .top-design-block > .left-block .sizes > .left-span, .top-design-block > .left-block .sizes > .right-span {
+        max-width: 50%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .top-design-block > .right-block, .top-design-block > .left-block, .control-block > .control, .friday-app-block > .sharing-block, .keyless-block, .bottom-design-block > .text {
+        padding: 35px 10px;
+    }
+}
+
+.lock-btns {
+	margin: auto;
+    margin-top: 255px;
+    padding: 0;
+	max-width: calc(100% - 25px);
+    box-sizing: content-box;
+}
+
+.lock-btns > p {
+    width: 20%;
+    display: inline-block;
+    float: left;
+    padding: 0px 5px;
+    text-align: center;
+}
+
+.lock-btns > p > span {
+    top: 10px;
+    font-family: 'AvenirBook', sans-serif;
+    font-size: 18px;
+    color: #b6bbbf;
+    position: relative;
+}
+
+.lock-btns > p .active_span {
+    color: #233342;
+}
+
+.lock-btns > p > img {
+    margin: auto;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    max-width: 100%;
+    border-radius: 100px;
+    border-color: transparent;
+}
+
+.btn-example > p {
+    max-width: 300px;
+    text-align: center;
+    margin: auto;
+    padding-right: 260px;
+    margin-top: -80px;
+    z-index: 0;
+}
+
+.btn-example > p > img {
+    max-width: 40px;
+}
+
+.active-lock-btn {
+    -moz-transform: rotate(90deg); /* Firefox */
+    -o-transform: rotate(90deg); /* Opera */
+    -webkit-transform: rotate(90deg); /* Safari y Chrome */
+    transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+    .lock-btns {
+        margin-top: 265px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lock-btns {
+        margin-top: 245px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-example {
+        margin-left: 10px;
+    }
+
+    .btn-example > p {
+        margin-top: -120px;
+    }
+
+    .lock-btns {
+        margin-top: 305px;
+    }
+
+}
+
+/**
+* Slider Block
+*/
+
+.bx-viewport {
+    padding: 0;
+    border: none;
+    margin-left: 0px;
+}
+
+.slider-block {
+    padding: 0;
+    margin-top: 10px;
+}
+
+.slider-block .second-title {
+    max-width: 450px;
+    margin-left: 45px;
+}
+
+.slider-block .selection-text {
+    margin-left: 45px;
+}
+
+.slider-block .first-title {
+    margin: 35px 45px;
+}
+
+.first-slide {
+    background-position: center;
+    background-image: url('../images/homepage/Lock.jpg');
+    min-height: 700px;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+
+.second-slide {
+    background-position: center;
+    background-image: url('../images/homepage/Lock.jpg');
+    min-height: 700px;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+/**
+* How it works block
+*/
+
+.how-it-works {
+    padding: 0;
+    margin-top: 10px;
+}
+
+.how-it-works div {
+    padding: 0;
+}
+
+.fits {
+    background-position: center;
+    background-image: url('../images/homepage/how-it-works/Fits.jpg');
+    min-height: 350px;
+    background-repeat: no-repeat;
+    padding: 0;
+    float: left;
+}
+
+.tell-siri {
+    background-position: center;
+    background-image: url('../images/homepage/how-it-works/Siri.jpg');
+    min-height: 700px;
+    background-repeat: no-repeat;
+    padding: 0;
+    float: left;
+}
+
+.no-handyman {
+    background-position: center;
+    background-image: url('../images/homepage/how-it-works/Handyman.jpg');
+    min-height: 350px;
+    background-repeat: no-repeat;
+    padding: 0;
+    float: left;
+}
+
+.no-unwanted {
+    background-position: center;
+    background-image: url('../images/homepage/how-it-works/Attention.jpg');
+    min-height: 350px;
+    background-repeat: no-repeat;
+    padding: 0;
+    float: left;
+}
+
+.safety {
+    background-position: center;
+    background-image: url('../images/homepage/how-it-works/Safety.jpg');
+    min-height: 350px;
+    background-repeat: no-repeat;
+    padding: 0;
+    float: left;
+}
+
+.how-it-works .second-title {
+    font-size: 21px;
+    padding: 35px;
+    padding-bottom: 0px;
+}
+
+.how-it-works .second-title:after {
+    content: ' ';
+    border-bottom: 2px #fff solid;
+    display: block;
+    position: relative;
+    width: 105px;
+    margin-top: 10px;
+}
+
+.how-it-works .selection-text {
+    padding-left: 35px;
+    font-family: 'AvenirBook', sans-serif;
+    font-size: 15px;
+}
+
+.how-it-works .icons {
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+.how-it-works .icons .house {
+    background-image: url('../images/homepage/how-it-works/icons/house.png');
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 15px;
+}
+
+.how-it-works .icons .wifi {
+    background-image: url('../images/homepage/how-it-works/icons/wifi.png');
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+}
+
+.how-it-works .icons .bluetooth {
+    background-image: url('../images/homepage/how-it-works/icons/bluetooth.png');
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+@media (min-width: 1296px) {
+    .safety, .fits {
+        width: 490px;
+    }
+
+    .no-unwanted, .no-handyman {
+        width: 350px;
+    }
+
+    .tell-siri {
+        width: 420px;
+    }
+}
+
+@media (max-width: 1296px) {
+    .safety, .fits {
+        width: 40%;
+    }
+
+    .no-unwanted, .no-handyman {
+        width: 25%;
+    }
+
+    .tell-siri {
+        width: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    .safety, .fits {
+        width: 60%;
+        margin-bottom: 10px;
+    }
+
+    .no-unwanted, .no-handyman {
+        width: 40%;
+        margin-bottom: 10px;
+    }
+
+    .tell-siri {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .how-it-works .selection-text {
+        margin-top: 10px;
+    }
+
+    .how-it-works .second-title {
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .safety, .fits, .no-unwanted, .no-handyman {
+        width: 100%;
+    }
+}
+
+/**
+* Buy Block
+*/
+
+.products-block {
+    margin-top: 10px;
+    min-height: 700px;
+    padding: 30px;
+}
+
+.products-block .first-title, .products-block .second-title, .products-block .selection-text {
+    color: #b6bbbf
+}
+
+.products-block .second-title:after {
+    border-bottom: 3px #b6bbbf solid;
+}
+
+.products-block .selection-text:after {
+    border-bottom: 1px #b6bbbf solid;
+    content: ' ';
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.products-block .selection-text {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.products-block .item {
+    max-width: 90px;
+    margin: 5px 15px;
+    text-align: center;
+    display: inline-block;
+}
+
+.products-block .item:nth-child(4n), .products-block .item:first-child {
+    margin-left: 0;
+}
+
+.products-block .item:last-child, .products-block .item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.products-block .item > img {
+    max-width: 100%;
+}
+
+.products-block .item span {
+    font-family: 'AvenirBook', sans-serif;
+    font-size: 18px;
+    color: #b6bbbf;
+}
+
+.products-block .item .active_span {
+    color: #233342;
+}
+
+.continue-btn {
+    top: 70px;
+    position: relative;
+    font-size: 18px;
+}
+
+#selected-item {
+    margin: auto;
+    max-width: 100%;
+    margin-top: 55px;
+}
+
+.select-item {
+    cursor: pointer;
+}
+
+@media (max-width: 1297px) {
+    .products-block .item {
+        margin: 0px 10px;
+    }
+
+    .products-block .item:last-child, .products-block .item:nth-child(3n), .products-block .item:nth-child(4n), .products-block .item:first-child {
+        margin: 0px 10px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .continue-btn {
+        top: 25px;
+    }
+}
+
+
+
+
+
+
+
+.skip-cart .count{
+    top: -21px;
+    position: relative;
+    left: -8px;
+    font-size: 12px;
+    height: 18px;
+    color: #fff;
+    background-color: #f03f39;
+    width: 18px;
+    border-radius: 9px;
+    line-height: 18px;
+}
+
+.skip-cart .count:before, .skip-cart .count:after{
+    content: '';
+}
+
+section{
+    max-width: 100%;
+    overflow: hidden;
+}
