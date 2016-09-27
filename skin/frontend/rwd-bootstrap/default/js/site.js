@@ -28,27 +28,15 @@ jQuery(document).ready(function($){
 
 	}
 	
-/*
-	var $gallery = {};
-	var $gallerySlider = null;
-	$('.product-img-box').on('changeSlides', function(){
-  	if( $gallery.length ) {
-    	$gallerySlider.destroySlider();
-    	$gallery.remove();
-  	}
-    var slides = $(this).find('.bundle-option-selected');
-    $gallery = $('<div class="product-image-gallery" />');
-    slides.find('img').each(function(){
-      var slide = $(this).clone();
-      slide.prop('data-zoom-image', slide.prop('src'));
-      $gallery.append(slide);
-    });
-    $(this).append($gallery);
-    //ProductMediaManager.init();
-  	$gallerySlider = $gallery.bxSlider({
-      mode: 'horizontal'
-    });
-	});
-*/
+  var wik = $('.what-installation-kit');
+  var prodOptBottom = $('.product-options-bottom');
+  if( wik.length && prodOptBottom.length ) {
+    prodOptBottom.before(wik);
+    if( $('html').hasClass('touch') ) {
+      wik.on('click', function(){
+        wik.toggleClass('state-open');
+      });
+    }
+  }
 
 });

@@ -98,7 +98,9 @@
                     <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
                 <?php endif; ?>
 
-            </div>
+                <?= $this->getChildHtml('product_shop_append') ?>
+
+            </div><?php /* .product-shop */ ?>
 
             <div class="add-to-cart-wrapper">
                 <?php echo $this->getChildHtml('product_type_data') ?>

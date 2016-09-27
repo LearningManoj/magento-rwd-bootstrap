@@ -262,6 +262,27 @@ body.cms-index-index {
     }
   }
   
+  .what-installation-kit {
+    position: relative; display: inline-block; padding-top: .15em;
+    .wik-toggle {
+      display: block; color: $c-action; font-size: 1.8rem; font-family: $f-stack-serif; cursor: pointer;
+      &:before { @extend %fa; @extend %fa-info-circle; margin-right: .5em; }
+    }
+    .wik-popup { display: none; position: absolute; z-index: 99999; bottom: 100%; left: 50%; width: 150%; max-width: 90vw; @include translate(-50%, 0);
+      background-color: #fff; padding: 1em; border-radius: .5em; box-shadow: 0 0 5px rgba(#000, .3); border: 1px solid rgba(#000, .1); }
+    .wik-popup:before { content: ""; position: absolute; z-index: 1; top: 100%; left: 50%; @include translate(-50%, 0); 
+     border: 5px solid transparent; border-top-color: #fff; }
+    .wik-popup:after { content: ""; position: absolute; z-index: 0; top: 100%; left: 50%; @include translate(-50%, 0); 
+     border: 6px solid transparent; border-top-color: rgba(#000, .1); }
+    &.state-open .wik-popup,
+    .no-touch &:hover .wik-popup { display: block; }
+  }
+
+  .product-shop-footer {
+    .free-shipping { text-align: right; font-size: 1.3rem; color: #84898f; }
+    .what-installation-kit { display: none; }
+  }
+  
   .col-main section { padding-top: $trim*3; }
   .col-main section h2.title { text-align: center; margin: 0 0 $trim*1.5; text-transform: uppercase; color: #b9bdc0; font-size: 4rem; }
 
