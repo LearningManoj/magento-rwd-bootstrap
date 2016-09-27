@@ -67,7 +67,7 @@
   	$productImgBox.on('changeSlides', function(){
 
       if( $gallery == null ) {
-        $gallery = $('<div class="product-image-gallery">');
+        $gallery = $('<div class="product-image-gallery" />');
         $productImgBox.find('.product-gallery-wrap').append($gallery);
       }
 
@@ -76,21 +76,22 @@
       mainImg.on('load', function(){
         $gallery.empty().append(mainImg);
         imgs.slice(1).clone().map(function(){
+          $(this).attr('src', $(this).attr('data-src'));
           $gallery.append(this);
         });
-        
+
+        var sliderSettings = {
+          mode: 'horizontal',
+          preventDefaultSwipeY: true,
+          buildPager: function(slideIndex){
+            return '<img src="'+ imgs.eq(slideIndex).attr('data-src') +'" />';
+          },
+        };
+
       	if( $gallerySlider !== null ) {
-        	$gallerySlider.reloadSlider();
+        	$gallerySlider.reloadSlider(sliderSettings);
       	} else {
-          $gallerySlider = $gallery.bxSlider({
-            mode: 'horizontal',
-            preventDefaultSwipeY: true,
-            onSlideBefore: function($slideElement, oldIndex, newIndex){
-              if( $slideElement.attr('src') == undefined ) {
-                $slideElement.attr('src', $slideElement.attr('data-src'));
-              }
-            },
-          });
+          $gallerySlider = $gallery.bxSlider(sliderSettings);
       	}
       });
 

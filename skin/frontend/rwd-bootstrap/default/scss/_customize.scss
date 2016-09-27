@@ -207,7 +207,7 @@ body.cms-index-index {
     .product-gallery-wrap > .product-image-gallery img:first-child { display: block; }
 
     .bx-wrapper { background-color: transparent; border: none; box-shadow: none; }
-    .bx-wrapper .product-image-gallery .gallery-image { display: block; }
+    .bx-wrapper .loading { background: transparent url(../images/opc-ajax-loader.gif) center center no-repeat; background-size: contain; }
   }
 
   .add-to-cart.plus-minus {
