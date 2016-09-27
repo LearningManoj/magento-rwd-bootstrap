@@ -61,6 +61,10 @@
 </div>
 <script>
   jQuery(function($){
+
+    // Requires ezPlus and bxSlider
+    // loaded in layout/rwd_bootsrap.xml
+
     var $productImgBox = $('.product-img-box');
   	var $gallery = null;
   	var $gallerySlider = null;
@@ -82,9 +86,21 @@
 
         var sliderSettings = {
           mode: 'horizontal',
+          controls: false,
+          infiniteLoop: false,
           preventDefaultSwipeY: true,
           buildPager: function(slideIndex){
             return '<img src="'+ imgs.eq(slideIndex).attr('data-src') +'" />';
+          },
+          onSliderLoad: function(currentSlideIndex){
+            $gallery.children().eq(currentSlideIndex).ezPlus();
+          },
+          onSlideBefore: function($slideElement, oldIndex, newIndex){
+            $slideElement.removeData('ezPlus');
+            $('.zoomContainer').remove();
+          },
+          onSlideAfter: function($slideElement, oldIndex, newIndex){
+            $slideElement.ezPlus();
           },
         };
 
@@ -94,8 +110,6 @@
           $gallerySlider = $gallery.bxSlider(sliderSettings);
       	}
       });
-
-      //ProductMediaManager.init();
   	});
   });
 </script>

@@ -1272,7 +1272,3 @@ var ProductMediaManager = {
         $j(document).trigger('product-media-loaded', ProductMediaManager);
     }
 };
-
-$j(document).ready(function() {
-    ProductMediaManager.init();
-});
