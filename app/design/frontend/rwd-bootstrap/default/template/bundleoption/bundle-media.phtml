@@ -84,23 +84,29 @@
           $gallery.append(this);
         });
 
+        var zoomSettings = {
+          responsive: true,
+          zoomType: 'window',
+        };
+
         var sliderSettings = {
           mode: 'horizontal',
           controls: false,
           infiniteLoop: false,
+          touchEnabled: false,
           preventDefaultSwipeY: true,
           buildPager: function(slideIndex){
             return '<img src="'+ imgs.eq(slideIndex).attr('data-src') +'" />';
           },
           onSliderLoad: function(currentSlideIndex){
-            $gallery.children().eq(currentSlideIndex).ezPlus();
+            $gallery.children().eq(currentSlideIndex).ezPlus(zoomSettings);
           },
           onSlideBefore: function($slideElement, oldIndex, newIndex){
             $slideElement.removeData('ezPlus');
             $('.zoomContainer').remove();
           },
           onSlideAfter: function($slideElement, oldIndex, newIndex){
-            $slideElement.ezPlus();
+            $slideElement.ezPlus(zoomSettings);
           },
         };
 
