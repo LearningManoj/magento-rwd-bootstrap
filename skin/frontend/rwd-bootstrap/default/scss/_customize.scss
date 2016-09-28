@@ -35,8 +35,8 @@ body:after { content: ""; display: block; width: 1px; height: 100vh; background-
   .skip-links { display: none; }
   .skip-link { float: none; background-color: transparent; border: none !important; }
   .nav > li > a { padding: 10px 20px; }
-  .nav-primary > li > a { font-family: "GothamMedium", sans-serif; font-size: 15px; color: #83898e; padding: 0 22px !important; }
-  .navbar-nav > li > a { color: #83898e; font-family: "MillerDisplayItalic", sans-serif; font-size: 15px; }
+  .nav-primary > li > a { font-family: $f-stack-special; font-size: 15px; color: #83898e; padding: 0 22px !important; }
+  .navbar-nav > li > a { color: #83898e; font-family: $f-stack-serif; font-size: 15px; }
   .navbar-toggle { background-color: #e9ecee; border: 1px solid #b6bbbf; }
   .navbar-toggle .icon-bar { background-color: #b6bbbf; }
   .navbar-nav { margin: auto; float: none; display: table; }
@@ -119,7 +119,7 @@ body.cms-index-index {
 
 .product-options .custom-options-robbie ul.options-list li {
   display: block; width: auto; line-height: inherit; padding: 0; position: relative; overflow: hidden;
-  label { cursor: pointer; }
+  label { cursor: pointer; font-family: $f-stack-sans; }
   > label { display: none; padding: 0; background-color: transparent; width: auto; }
 }
 
@@ -148,7 +148,7 @@ body.cms-index-index {
     padding: 0; margin: 0; position: relative; border: none;
     
     dt { padding: 0; border-bottom: 1px solid rgba(#b8bcbf, 0.8); margin-bottom: $trim-small; }
-    dt > label { margin: 0; font-family: AvenirBook, sans-serif; font-weight: 300; font-size: 2.2rem; color: #b8bcbf; }
+    dt > label { margin: 0; font-family: $f-stack-sans; font-weight: 300; font-size: 2.2rem; color: #b8bcbf; }
     dd { border: none; }
     p.required { margin: 0; right: 0; top: 0; font-size: 1rem; font-weight: normal; }
   }
@@ -257,7 +257,8 @@ body.cms-index-index {
         background-color: #A9AEB2; color: #fff; box-shadow: none; border: none;
       }
       .add-to-cart-buttons .btn-cart { margin: 0; float: none; padding: 0 .25em; font-size: 1.8rem; line-height: 4rem; min-height: 0; min-width: 0; width: 100%; 
-        border-radius: 500px; text-transform: none;
+        border-radius: 500px; text-transform: none; font-family: $f-stack-sans;
+        > span { display: inline-block; vertical-align: middle; }
       }
     }
   }
