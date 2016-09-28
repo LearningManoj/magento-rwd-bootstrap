@@ -66,14 +66,17 @@
     // loaded in layout/rwd_bootsrap.xml
 
     var $productImgBox = $('.product-img-box');
+    var $galleryWrap = $productImgBox.find('.product-gallery-wrap');
   	var $gallery = null;
   	var $gallerySlider = null;
   	$productImgBox.on('changeSlides', function(){
 
       if( $gallery == null ) {
         $gallery = $('<div class="product-image-gallery" />');
-        $productImgBox.find('.product-gallery-wrap').append($gallery);
+        $galleryWrap.append($gallery);
       }
+
+      $galleryWrap.addClass('loading');
 
       var imgs = $productImgBox.find('.bundle-option-selected img');
       var mainImg = $('<img />').attr('src', imgs.eq(0).attr('data-src'));
@@ -117,6 +120,8 @@
       	} else {
           $gallerySlider = $gallery.bxSlider(sliderSettings);
       	}
+      	
+      	$galleryWrap.removeClass('loading');
       });
   	});
   });
