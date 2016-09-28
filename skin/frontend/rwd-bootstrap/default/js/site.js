@@ -1,5 +1,13 @@
 jQuery.noConflict();
 
+bp = {
+  xsmall: 479,
+  small: 599,
+  medium: 767,
+  large: 979,
+  xlarge: 1199
+};
+
 jQuery(document).ready(function($){
 
 	// Product View Qty +/-
@@ -39,4 +47,30 @@ jQuery(document).ready(function($){
     }
   }
 
-});
+  if( mq('min-width', bp.large) ) {
+
+
+    if( isCartPage() ) {
+      var cartShipping = $('.cart-forms .shipping');
+      cartShipping.addClass('interactive');
+      cartShipping.on('click', 'h2', function(){
+        cartShipping.toggleClass('state-open');
+      });
+    }
+
+  }
+
+}); // document ready
+
+
+function isCartPage() {
+  return jQuery('body').hasClass('checkout-cart-index');
+}
+
+function mq(cond, breakpoint) {
+  return Modernizr.mq("screen and ("+ cond +":" + breakpoint + "px)");
+}
+
+
+
+
