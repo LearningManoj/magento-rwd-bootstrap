@@ -236,6 +236,14 @@ body.cms-index-index {
 
 } // .product-view
 
+
+
+.zoomContainer {
+  .zoomWindowContainer {  }
+  .zoomWindow { border-color: #84898f !important; border-radius: 4px; }
+}
+
+
 @include bp(max-width, $bp-medium) {
   .catalog-product-view {
     .product-img-box { width: 100%; padding-right: $trim; }

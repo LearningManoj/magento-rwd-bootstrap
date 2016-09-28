@@ -77,19 +77,24 @@
       }
 
       $galleryWrap.addClass('loading');
+      $('.zoomContainer').remove();
 
       var imgs = $productImgBox.find('.bundle-option-selected img');
       var mainImg = $('<img />').attr('src', imgs.eq(0).attr('data-src'));
       mainImg.on('load', function(){
-        $gallery.empty().append(mainImg);
+        var $tempHolder = $('<div/>');
+        $tempHolder.append(mainImg);
         imgs.slice(1).clone().map(function(){
           $(this).attr('src', $(this).attr('data-src'));
-          $gallery.append(this);
+          $tempHolder.append(this);
         });
+
+        $gallery.html($tempHolder.children());
 
         var zoomSettings = {
           responsive: true,
           zoomType: 'window',
+          borderSize: 5,
         };
 
         var sliderSettings = {
@@ -106,7 +111,6 @@
             $gallery.children().eq(currentSlideIndex).ezPlus(zoomSettings);
           },
           onSlideBefore: function($slideElement, oldIndex, newIndex){
-            $slideElement.removeData('ezPlus');
             $('.zoomContainer').remove();
           },
           onSlideAfter: function($slideElement, oldIndex, newIndex){
