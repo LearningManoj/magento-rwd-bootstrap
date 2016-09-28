@@ -199,6 +199,7 @@ body.cms-index-index {
   .product-options-bottom { border: none; }
 
   .bundle-option-wrap.bundle-option-1 { display: none; /* Hide the Lock */ }
+  .bundle-option-wrap.bundle-option-3 { display: none; /* Hide the Installation Kit */ }
 
   #bundle-product-container-all-options { display: none; }
 
@@ -271,6 +272,9 @@ body.cms-index-index {
   
   .what-installation-kit {
     position: relative; display: inline-block; padding-top: .15em;
+    
+    display: none !important; /* Hide temporarily */
+    
     .wik-toggle {
       display: block; color: $c-action; font-size: 1.8rem; font-family: $f-stack-serif; cursor: pointer;
       &:before { @extend %fa; @extend %fa-info-circle; margin-right: .5em; }
