@@ -76,10 +76,12 @@
         $galleryWrap.append($gallery);
       }
 
-      $galleryWrap.addClass('changing');
       $('.zoomContainer').remove();
 
+      $galleryWrap.addClass('changing');
       setTimeout(function(){
+        // This is to prevent showing the loading for just a split second.
+        // We only show it if changing the images and loading them takes more than 200ms
         if( $galleryWrap.hasClass('changing') ) {
           $galleryWrap.addClass('loading');
         }
@@ -95,7 +97,7 @@
           $tempHolder.append(this);
         });
 
-        $gallery.html($tempHolder.children());
+        $gallery.html($tempHolder.children()); // minimize DOM injections
 
         var zoomSettings = {
           responsive: true,
