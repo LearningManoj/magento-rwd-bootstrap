@@ -76,8 +76,14 @@
         $galleryWrap.append($gallery);
       }
 
-      $galleryWrap.addClass('loading');
+      $galleryWrap.addClass('changing');
       $('.zoomContainer').remove();
+
+      setTimeout(function(){
+        if( $galleryWrap.hasClass('changing') ) {
+          $galleryWrap.addClass('loading');
+        }
+      }, 200);
 
       var imgs = $productImgBox.find('.bundle-option-selected img');
       var mainImg = $('<img />').attr('src', imgs.eq(0).attr('data-src'));
@@ -125,7 +131,7 @@
           $gallerySlider = $gallery.bxSlider(sliderSettings);
       	}
       	
-      	$galleryWrap.removeClass('loading');
+      	$galleryWrap.removeClass('changing loading');
       });
   	});
   });
