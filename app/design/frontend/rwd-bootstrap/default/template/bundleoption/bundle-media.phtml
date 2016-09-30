@@ -109,20 +109,20 @@
           mode: 'horizontal',
           controls: false,
           infiniteLoop: false,
-          touchEnabled: false,
+          touchEnabled: true,
           preventDefaultSwipeY: true,
           buildPager: function(slideIndex){
             return '<img src="'+ imgs.eq(slideIndex).attr('data-src') +'" />';
           },
           onSliderLoad: function(currentSlideIndex){
-            if( Modernizr.mq("screen and (max-width:" + bp.medium + "px)") ) return;
+            if( Modernizr.touch ) return; // zoom doesn't work well on touch
             $gallery.children().eq(currentSlideIndex).ezPlus(zoomSettings);
           },
           onSlideBefore: function($slideElement, oldIndex, newIndex){
             $('.zoomContainer').remove();
           },
           onSlideAfter: function($slideElement, oldIndex, newIndex){
-            if( Modernizr.mq("screen and (max-width:" + bp.medium + "px)") ) return;
+            if( Modernizr.touch ) return; // zoom doesn't work well on touch
             $slideElement.ezPlus(zoomSettings);
           },
         };
